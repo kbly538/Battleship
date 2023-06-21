@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.gameboard-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    gap: 1em
+}
+
+.gameboard-grid {
+    width: max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: grey;
+    color: rgb(155, 57, 57)
+
+
+}
+
+.gameboard-grid.waiting-board {
+    animation: glow-waiting 1s ease infinite alternate;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    flex-shrink: 0;
+    border: 1px solid rgb(62, 146, 69);
+}
+
+.cell.has-ship {
+    background-color: rgb(112, 112, 71);
+}
+
+
+.missed:active {
+    animation: shake 350ms;
+}
+
+.targetAcquired:not(.attacked) {
+    background: radial-gradient(red, black)
+}
+
+.attacked:not(.missed) {
+    background: rgb(39, 105, 39);
+    background-color: rgb(39, 105, 39);
+}
+
+.attacked.missed {
+    background-color: rgb(110, 36, 36);
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(5px);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: scale(1.2);
+        background-color: rgb(201, 66, 66);
+    }
+
+    50% {
+        transform: scale(1);
+        background-color: green;
+    }
+
+    100% {
+        transform: scale(1.2);
+        background-color: rgb(107, 30, 30);
+    }
+}
+
+
+@keyframes glow-waiting {
+    0% {
+        box-shadow: 0 0 5px 2px rgb(0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 5px 4px  rgb(255, 0, 0);
+    }
+
+} 
+

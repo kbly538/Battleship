@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+.main-menu-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(
+        black 0%,
+        rgb(12, 12, 12) 1%,
+        black 2%,
+        rgb(12, 12, 12) 3%);
+
+    gap: 2rem;
+}
+
+.game-title {
+    color:rgb(70, 238, 70);
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    padding: 10px;
+    border:2px solid rgb(70, 238, 70);
+}
+
+.name-input {
+    color:rgb(70, 238, 70);
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background-color:  rgba(12, 12, 12, 0);
+}
+
+.name-input[type="text"] {
+    outline: none;
+    text-align: left;
+}
+
+.name-input[type="text"], 
+.name-input[type="text"]::placeholder {
+    color:rgb(70, 238, 70);
+    animation: pulse 1s infinite;
+}
+
+.name-input[type="text"]:focus {
+    color:rgb(70, 238, 70);
+    animation: none;
+}
+
+form {
+    text-align: left;
+    display: flex;
+}
+
+form > label {
+    color:rgb(70, 238, 70);
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    padding: 10px;
+    background-color:  rgba(12, 12, 12, 0);
+    border: none;
+}
+
+
+.submit-name {
+    color:rgb(70, 238, 70);
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:  rgba(12, 12, 12, 0);
+    border: 1px solid rgba(70, 238, 70, 0.305);;
+    cursor: crosshair;
+}
+
+
+@keyframes pulse{
+    0% {
+        color:rgb(70, 238, 70);
+        opacity: 1.0;
+    }
+
+    100% {
+        color:rgba(70, 238, 70, 0);
+        opacity: 0;
+    }
+}

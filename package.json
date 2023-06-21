@@ -1,0 +1,44 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "JS implementation of classic game 'Battleship' as part of the Odin Project curriculum.",
+  "main": "index.js",
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+      }
+    }
+  },
+  
+
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch --verbose *.js",
+    "watchwt": "jest --coverage",
+    "watchplayer": "jest --watch --verbose --onlyChanged player.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbly538/Battleship.git"
+  },
+  "keywords": [
+    "battleship",
+    "theodinproject"
+  ],
+  "author": "kbly538",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbly538/Battleship/issues"
+  },
+  "homepage": "https://github.com/kbly538/Battleship#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@types/jest": "^29.5.2",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0"
+  }
+}

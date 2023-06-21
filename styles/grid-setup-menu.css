@@ -1,0 +1,52 @@
+.start-game-btn {
+    color:rgb(70, 238, 70);
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:  rgba(12, 12, 12, 0);
+    border: 1px solid rgba(70, 238, 70, 0.305);;
+    cursor: crosshair;
+}
+
+.orientation-shortcut-info {
+    color:rgb(70, 238, 70);
+    font-size: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:  rgba(12, 12, 12, 0);
+
+}
+
+.start-pulse {
+    animation: pulse 0.3s infinite;
+}
+
+.ships-info {
+    color:rgb(70, 238, 70);
+    font-size: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:  rgba(12, 12, 12, 0);
+
+}
+
+@keyframes pulse{
+    0% {
+        color:rgb(70, 238, 70);
+        opacity: 1.0;
+    }
+
+    100% {
+        color:rgba(70, 238, 70, 0);
+        opacity: 0.8;
+    }
+}
