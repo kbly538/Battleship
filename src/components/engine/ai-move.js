@@ -6,6 +6,19 @@ import {
 } from "../UI/update.js"
 import { CellStatus } from "../enums.js"
 
+
+/**
+ * Process a medium AI's move by updating the game state based on the selected cell.
+ *
+ * @param {Object} p1 - Player 1 object.
+ * @param {Object} p2 - Player 2 object.
+ * @param {string} turn - The current turn, either "p1" or "p2".
+ * @param {AI} p1AI - MediumAI object for Player 1.
+ * @param {AI} p2AI - MediumAI object for Player 2.
+ * @returns {Array} - An array containing the updated turn and a boolean indicating if the game has ended.
+ */
+
+
 export const processMediumAI = (p1, p2, turn, p1AI, p2AI) => {
     updateConsoles(p1, p2, turn)
     updateGridSignal(turn, p1, p2)
@@ -90,15 +103,16 @@ export const processMediumAI = (p1, p2, turn, p1AI, p2AI) => {
 
 
 /**
- * Process a player's move by updating the game state based on the selected cell.
+ * Process the AI's moves by updating the game state based on the selected cell.
  *
- * @param {Event} e - The event object representing the player's move.
  * @param {Object} p1 - Player 1 object.
  * @param {Object} p2 - Player 2 object.
  * @param {string} turn - The current turn, either "p1" or "p2".
- * @returns {string} - The updated turn after processing the move.
+ * @param {AI} p1AI - AI object for Player 1.
+ * @param {AI} p2AI - AI object for Player 2.
+ * @returns {Array} - An array containing the updated turn and a boolean indicating if the game has ended.
  */
-export const processAIMoves = (p1, p2, turn, p1AI, p2AI) => {
+export const processEasyAI = (p1, p2, turn, p1AI, p2AI) => {
 
     updateConsoles(p1, p2, turn)
     updateGridSignal(turn, p1, p2)

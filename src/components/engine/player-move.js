@@ -5,7 +5,15 @@ import {
     updateGridSignal} from "../UI/update.js"
 import {CellStatus} from "../enums.js"
 
-
+/**
+ * Processes a player's move and updates the game state accordingly.
+ *
+ * @param {Event} e - The click event object.
+ * @param {Player} p1 - Player 1 object.
+ * @param {Player} p2 - Player 2 object.
+ * @param {string} turn - Current turn.
+ * @returns {string} The updated turn after processing the move.
+ */
 
 export const processPlayerMove = (e, p1, p2, turn) => {
 
