@@ -1,6 +1,12 @@
 import {createGameboardComponent} from "./gameboard.js"
 
+/**
 
+Creates a grid setup menu for a player.
+@param {Player} player - The player for whom the grid setup menu is created.
+@returns {HTMLElement} The grid setup menu wrapper element.
+
+*/
 export const createGridSetupMenu = (player) => {
 
     // Wrapper

@@ -1,3 +1,9 @@
+/**
+
+Sets up the main menu for the game.
+@returns {HTMLElement} The main menu wrapper element.
+*/
+
 export const setupMainMenu = () => {
 
     const mainMenuWrapper = document.createElement('div')

@@ -11,7 +11,13 @@ export const updateCellElement = (cellElement, classValues) => {
 }
 
 
+/**
 
+Updates the turn signal to indicate the active player's turn.
+@param {string} turn - The name of the active player.
+@param {Player} p1 - Player 1 object.
+@param {Player} p2 - Player 2 object.
+*/
 export const updateTurnSignal = (turn, p1, p2) => {
     let turnActiveFor = turn === p1.name ? p1.name : p2.name;
     let header = null
@@ -39,7 +45,13 @@ export const updateTurnSignal = (turn, p1, p2) => {
         header.innerText = `${p1.name}'s turn`
     }
 }
+/**
 
+Updates the grid signal to indicate the active player's grid.
+@param {string} turn - The name of the active player.
+@param {Player} p1 - Player 1 object.
+@param {Player} p2 - Player 2 object.
+*/
 export const updateGridSignal = (turn, p1, p2) => {
     let turnActiveFor = turn === p1.name ? p1.name : p2.name;
     let waitingBoard = null
@@ -66,7 +78,13 @@ export const updateGridSignal = (turn, p1, p2) => {
     }
 
 }
+/**
 
+Updates the console screen with player statistics.
+@param {Player} player1 - Player 1 object.
+@param {Player} player2 - Player 2 object.
+@returns {string} The HTML string representing the updated console screen.
+*/
 export const updateConsoleScreen = (player1, player2) =>
 
     `    <div> 
