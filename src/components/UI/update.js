@@ -100,6 +100,14 @@ export const updateConsoleScreen = (player1, player2) =>
     Ships Remaining: ${player2.gameboard.allShips.size}
     </div>`
 
+
+/**
+
+Updates the consoles of both players with the updated console screen.
+@param {Player} p1 - Player 1 object.
+@param {Player} p2 - Player 2 object.
+@param {string} turn - The name of the active player.
+*/
 export const updateConsoles = (p1, p2, turn) => {
     let p1Console = document.querySelector(".p1-console")
     let p2Console = document.querySelector(".p2-console")
