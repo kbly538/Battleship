@@ -18,3 +18,7 @@ Game mechanics in ```engine``` folder were written using **TDD** but dom manipul
 - Player vs. AI mode: A human player can play against an AI opponent at different difficulty levels (easy and medium).
 - Hard difficulty AI
 - Game results Screen: At the end of the loop, the game displays the winner and the win rate for each player.
+
+## Example AI vs AI
+[ai_vs_ai.webm](https://github.com/kbly538/Battleship/assets/4437722/93d2a26d-5258-4a9d-a924-838e36a62038)
+
