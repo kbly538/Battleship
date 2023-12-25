@@ -1,5 +1,5 @@
-import Gameboard, {Node} from "../../gameboard.js"
-import Ship from "../../ship.js";
+import Gameboard, {Node} from "../gameboard.js"
+import Ship from "../ship.js";
 
 describe("Gameboard", () => {
 

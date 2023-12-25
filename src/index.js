@@ -6,7 +6,7 @@ import {createGridSetupMenu} from "./components/UI/grid-setup-screen.js"
 import {createGameboardContainer} from "./components/UI/container.js"
 import {processPlayerMove} from "./components/engine/player-move.js"
 import {AIFactory} from "./components/engine/AI.js"
-import {processMediumAI, processAIMoves} from "./components/engine/ai-move.js"
+import {processMediumAI} from "./components/engine/ai-move.js"
 
 import {
     ShipNames, 
@@ -77,18 +77,18 @@ confirmButton.addEventListener('click', (e) => {
     
     // Prepare player 1
     p1Gameboard = new Gameboard()
-    p1 = new Player(playerName, p1Gameboard, true)
+    p1 = new Player(playerName, p1Gameboard, false)
 
     // Prepare player 2
     p2Gameboard = new Gameboard()
     p2Gameboard.populateGameboard()
-    p2 = new Player("CPU", p2Gameboard, true)
+    p2 = new Player("CPU", p2Gameboard, false)
 
     if (p1.isAi && p2.isAi) {
         let aiFactory = new AIFactory()
-        let p1dif = "easy"
+        let p1dif = "medium"
         let p2dif = "medium"
-        let p1AI = aiFactory.getEasy(10)
+        let p1AI = aiFactory.getMedium(10)
         let p2AI = aiFactory.getMedium(10)
         p1.gameboard.populateGameboard()
         p2.gameboard.populateGameboard()
@@ -154,14 +154,14 @@ confirmButton.addEventListener('click', (e) => {
                         if (turn[0] === p1.name) {
                             if (p1dif === "easy")
                             {
-                                turn = processAIMoves(p1, p2, turnOf, p1AI, p2AI)
+                                turn = processMediumAI(p1, p2, turnOf, p1AI, p2AI)
                             } else {
                                 turn = processMediumAI(p1, p2, turnOf, p1AI, p2AI)
                             }
                         } else if (turn[0] === p2.name) {
                             if (p2dif === "easy")
                             {
-                                turn = processAIMoves(p1, p2, turnOf, p1AI, p2AI)
+                                turn = processMediumAI(p1, p2, turnOf, p1AI, p2AI)
                             } else {
                                 turn = processMediumAI(p1, p2, turnOf, p1AI, p2AI)
                             }

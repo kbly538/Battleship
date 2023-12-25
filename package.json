@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JS implementation of classic game 'Battleship' as part of the Odin Project curriculum.",
   "main": "index.js",
+  "type": "module",
   "babel": {
     "env": {
       "test": {
